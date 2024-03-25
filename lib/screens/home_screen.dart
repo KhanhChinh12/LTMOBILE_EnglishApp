@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Center(child:
             Text(
-              "Piyo English",
+              "Piyo Junior",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,
