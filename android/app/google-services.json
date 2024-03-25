@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51883769001",
+    "project_id": "piyo-english-d7492",
+    "storage_bucket": "piyo-english-d7492.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51883769001:android:075d2e30434c4f680fbdb8",
+        "android_client_info": {
+          "package_name": "com.example.learning_english"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHyGL1VY_cOh0bARxKF6jjK_4mXHlRS9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
