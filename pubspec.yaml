@@ -38,6 +38,8 @@ dependencies:
   flutter_native_splash: ^2.3.10
   firebase_core: ^2.26.0
   firebase_auth: ^4.17.7
+  equatable: ^2.0.5
+  flip_card: ^0.7.0
 
 flutter_native_splash:
   android: true
