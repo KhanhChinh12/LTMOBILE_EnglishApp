@@ -40,6 +40,8 @@ dependencies:
   firebase_auth: ^4.17.7
   equatable: ^2.0.5
   flip_card: ^0.7.0
+  news_api_flutter_package: ^1.1.1
+  flutter_webview_plugin: ^0.4.0
 
 flutter_native_splash:
   android: true

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learning_english/components/my_list.dart';
+import 'package:learning_english/screens/information_screen.dart';
+import 'package:learning_english/screens/leaderboard_screen.dart';
+import 'package:learning_english/screens/news_page.dart';
+import 'package:learning_english/screens/practice_screen.dart';
+import 'package:learning_english/screens/setting_screen.dart';
 import 'package:learning_english/screens/signin_screen.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -36,8 +41,8 @@ class MyDrawer extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              /* Navigator.push(context,
-                MaterialPageRoute(builder: (context) => PracticeScreen())); */
+              Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => PracticeScreen()));
             },
             child: MyListTile(
               icon: Icons.assignment,
@@ -47,10 +52,8 @@ class MyDrawer extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              /*
               Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => NewsPage()));
-              */
             },
             child: MyListTile(
               icon: Icons.newspaper,
@@ -60,11 +63,8 @@ class MyDrawer extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              /*
               Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => LeaderBoard()));
-
-               */
             },
             child: MyListTile(
               icon: Icons.emoji_events,
@@ -74,11 +74,8 @@ class MyDrawer extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              /*
               Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => Information()));
-
-               */
             },
             child: MyListTile(
               icon: Icons.info,
@@ -88,11 +85,8 @@ class MyDrawer extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              /*
               Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => SettingScreen()));
-
-               */
             },
             child: MyListTile(
               icon: Icons.settings,
