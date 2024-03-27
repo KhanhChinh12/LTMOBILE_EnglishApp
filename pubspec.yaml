@@ -42,6 +42,7 @@ dependencies:
   flip_card: ^0.7.0
   news_api_flutter_package: ^1.1.1
   flutter_webview_plugin: ^0.4.0
+  audioplayers: ^0.20.1
 
 flutter_native_splash:
   android: true
@@ -74,6 +75,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - images/
+     - sounds/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
