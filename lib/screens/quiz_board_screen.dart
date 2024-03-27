@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_english/game_quiz/hangMan_screen.dart';
-import 'package:learning_english/game_quiz/test_board_screen.dart';
+import 'package:learning_english/game_quiz/test_knowledge_screen.dart';
 import 'package:learning_english/game_quiz/wordle_screen.dart';
 import 'package:learning_english/utils/color_utils.dart';
 
@@ -9,13 +9,13 @@ class QuizBoard extends StatelessWidget {
   List imgData = [
     "images/wordle.png",
     "images/game.png",
-    "images/quiz.png",
+    "images/knowledge.png",
   ];
 
   List titles = [
     "WORDLE GAME",
     "HANG MAN",
-    "QUIZ",
+    "SOCIAL KNOWLEDGE",
   ];
 
   @override
