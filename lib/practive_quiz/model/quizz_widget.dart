@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_english/practive_quiz/model/question_model.dart';
-import 'package:learning_english/utils/color_utils.dart';
+
+import '../../utils/color_utils.dart';
+
 
 Widget questionWidget(
     QuestionModel questionModel, void Function() function, bool presed) {
@@ -8,12 +10,12 @@ Widget questionWidget(
     children: [
       SizedBox(
         width: double.infinity,
-        height: 200.0,
+        height: 250.0,
         child: Text(
           "${questionModel.question}",
           style: TextStyle(
             color: Colors.white,
-            fontSize: 22.0,
+            fontSize: 20.0,
           ),
         ),
       ),
