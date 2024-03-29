@@ -1,9 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:learning_english/screens/home_screen.dart';
 import 'package:learning_english/screens/my_screen.dart';
-import 'package:learning_english/screens/signin_screen.dart';
-import 'package:learning_english/utils/color_utils.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -30,14 +28,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
   String _passwordagain = "";
   String _phone = "";
 
+  Future addUserDetails(String email, String name, String phone) async{
+    await FirebaseFirestore.instance.collection('users').add({
+      'email' : email,
+      'name' : name,
+      'sdt' : phone,
+    });
+  }
+
   void _handleSignUp() async{
+    if (passwordConfirmed()) {
       try {
+        //print("User Registered: ${userCredential.user!.email}");
         UserCredential userCredential =
         await _auth.createUserWithEmailAndPassword(
-            email: _email,
-            password: _password,
+          email: _email,
+          password: _password,
         );
-        //print("User Registered: ${userCredential.user!.email}");
+        addUserDetails(
+          _email,
+          _username,
+          _phone,
+        );
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             backgroundColor: Colors.blue,
             content: Center(
@@ -49,15 +61,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ))
         );
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MyScreen()));
-        //_emailTextController.clear();
-        //_passwordTextController.clear();
-        //_userNameTextController.clear();
-        //_phoneTextController.clear();
-        //_passwordagainTextController.clear();
-      }on FirebaseAuthException catch (e) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => MyScreen()));
+        _emailTextController.clear();
+        _passwordTextController.clear();
+        _userNameTextController.clear();
+        _phoneTextController.clear();
+        _passwordagainTextController.clear();
+      } on FirebaseAuthException catch (e) {
         //print("Lỗi đăng ký: $e");
-        if(e.code == 'weak-password'){
+        if (e.code == 'weak-password') {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               backgroundColor: Colors.red,
               content: Center(
@@ -69,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ))
           );
-        }else if(e.code=="email-already-in-use"){
+        } else if (e.code == "email-already-in-use") {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               backgroundColor: Colors.red,
               content: Center(
@@ -83,6 +96,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
           );
         }
       }
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          backgroundColor: Colors.red,
+          content: Center(
+            child: Text(
+              "Mật khẩu chưa khớp",
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+          ))
+      );
+    }
+  }
+
+  bool passwordConfirmed(){
+    if(_passwordTextController.text.trim() == _passwordagainTextController.text.trim()){
+      return true;
+    } else{
+      return false;
+    }
   }
   @override
 
