@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_english/game_quiz/dictionary_screen.dart';
 import 'package:learning_english/game_quiz/hangMan_screen.dart';
 import 'package:learning_english/game_quiz/test_knowledge_screen.dart';
 import 'package:learning_english/game_quiz/wordle_screen.dart';
@@ -10,12 +11,14 @@ class QuizBoard extends StatelessWidget {
     "images/wordle.png",
     "images/game.png",
     "images/knowledge.png",
+    "images/dictionary.png",
   ];
 
   List titles = [
     "WORDLE GAME",
     "HANG MAN",
     "SOCIAL KNOWLEDGE",
+    "DICTIONARY",
   ];
 
   @override
@@ -59,6 +62,9 @@ class QuizBoard extends StatelessWidget {
                 }else if(index == 2) {
                   Navigator.push(context, 
                     MaterialPageRoute(builder: (context) => TestBoard()));
+                }else if(index == 3) {
+                  Navigator.push(context, 
+                    MaterialPageRoute(builder: (context) => DictionaryScreen()));
                 }
               },
               child: Container(

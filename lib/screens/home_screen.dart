@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learning_english/components/drawer.dart';
 import 'package:learning_english/screens/course_screen.dart';
 
+import 'notification_screen.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -41,10 +43,10 @@ class _HomePageState extends State<HomePage> {
           actions: [
             IconButton(
               onPressed: () {
-                /* Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => NotificationScreen()),
-                ); */
+                );
               },
               icon: Icon(Icons.notifications, color: Colors.white),
             ),
