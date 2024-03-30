@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Search here",
+                        hintText: "Tìm kiếm",
                         hintStyle: TextStyle(
                           color: Colors.black.withOpacity(0.5),
                         ),
@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                "55 Videos",
+                                "4 Videos",
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,

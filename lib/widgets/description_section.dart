@@ -8,9 +8,9 @@ class DescriptionSection extends StatelessWidget{
       child: Column(
         children: [
           Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Chào mừng bạn đến với khóa học Vocabulary Complete Course. Trong khóa học này, chúng tôi sẽ đưa bạn vào hành trình khám phá vốn từ vựng theo các chủ đề đa dạng và thú vị. Từ những từ vựng cơ bản đến những từ ngữ phức tạp, chúng tôi sẽ giúp bạn hiểu rõ hơn về cách sử dụng chúng trong ngữ cảnh khác nhau. Với phương pháp học tập linh hoạt và thú vị, bạn sẽ có cơ hội thực hành và ứng dụng từ vựng mới một cách tự tin và hiệu quả. Hãy cùng chúng tôi trải nghiệm và mở rộng thế giới của ngôn ngữ!",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               color: Colors.black.withOpacity(0.7),
             ),
             textAlign: TextAlign.justify,

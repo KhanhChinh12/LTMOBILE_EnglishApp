@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_english/widgets/videos.dart';
 
 class VideoSection extends StatelessWidget{
   List videoList = [
@@ -22,10 +23,17 @@ class VideoSection extends StatelessWidget{
               color: index == 0 ? Color(0xFF674AEF) : Color(0xFF674AEF).withOpacity(0.6),
               shape: BoxShape.circle,
             ),
-            child: Icon(
-              Icons.play_circle_fill,
-              color: Colors.white,
-              size: 30,
+            child: IconButton(
+              icon: Icon(Icons.play_circle_fill, color: Colors.white, size: 30,),
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => Video(),
+                  ),
+                );
+              },
+
             )
           ),
           title: Text(

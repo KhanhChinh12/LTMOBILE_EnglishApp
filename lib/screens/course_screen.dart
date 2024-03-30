@@ -74,7 +74,7 @@ class _CourseScreenState extends State<CourseScreen> {
             ),
             SizedBox(height: 5),
             Text(
-              "55 Videos",
+              "4 Videos",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w500,

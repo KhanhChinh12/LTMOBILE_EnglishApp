@@ -42,9 +42,10 @@ dependencies:
   flip_card: ^0.7.0
   news_api_flutter_package: ^1.1.1
   flutter_webview_plugin: ^0.4.0
-  audioplayers: ^0.20.1
+  audioplayers: ^4.1.0
   http:
   cloud_firestore: ^4.15.8
+  youtube_player_flutter: ^8.1.2
 
 flutter_native_splash:
   android: true
